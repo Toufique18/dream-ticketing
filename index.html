@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,70 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/5b86fcd3d0.js" crossorigin="anonymous"></script>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header class="font-['Raleway']">
+
+        <nav class="container mx-auto lg:px-20 px-5 py-5">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="text-neutral-900 font-extrabold text-xl lg:text-4xl">Sky-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal text-gray-950 text-opacity-70 px-1 text-base">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <button class="inline-flex items-center p-4 gap-2 bg-lime-600 bg-opacity-10 rounded-xl border border-lime-600 border-opacity-40">
+                        <p class="text-lime-600  text-xs lg:text-xl">Bus</p>
+                        <img src="images/bus-icon.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="container mx-auto lg:px-20 px-5 py-5">
+            <div class="bg-[url('/images/banner.png')] bg-cover bg-center w-full h-full rounded-[32px] lg:px-44 lg:pt-14 lg:pb-48 text-center">
+                <div class="">
+                    <h1 class="text-white text-6xl font-extrabold font-['Raleway'] leading-[60px]">End-to-End Travel with <span class="text-lime-600">Sky Paribahan</span></h1>
+                    <p class="text-center text-white text-base font-normal font-['Inter'] leading-[20px] my-7">Sky Paribahan offers breathtaking views, soaring above clouds, witnessing sunsets, and embracing a sense of freedom amidst endless horizons, a journey beyond earthly bounds</p>
+                    <button class="bg-lime-600 rounded-xl justify-center items-center text-center text-gray-950 text-base p-3 font-bold font-['Raleway'] ">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        
+    </footer>
 
 </body>
 
