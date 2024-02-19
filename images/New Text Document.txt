@@ -16,3 +16,9 @@ function colorChange(buttonClicked){
     buttonClicked.style.backgroundColor = '#1DD100';
     buttonClicked.classList.add('bg-lime-600', 'text-white');
 }
+
+const buttonNext = document.getElementById("next-button");
+            if (buttonNext.disabled) {
+                buttonNext.disabled = false;
+                buttonNext.classList.add("bg-lime-500");
+            }

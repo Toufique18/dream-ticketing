@@ -14,11 +14,7 @@ for (const btnal of btnAll) {
             btnal.disabled = true; 
             colorChange(btnal);
             seatLeft("left-seat");
-            const buttonNext = document.getElementById("next-button");
-            if (buttonNext.disabled) {
-                buttonNext.disabled = false;
-                buttonNext.classList.add("bg-lime-500");
-            }
+            
         //console.log(e.target.innerText);
         const seatName = e.target.innerText;
         const className = "Economoy";
@@ -146,7 +142,24 @@ buttonApply.addEventListener("click", function () {
         buttonApply.style.display = "none";
     }
 });
+//next button enable
+const phoneNumberInput = document.getElementById("numberInput");
+const nextButton = document.getElementById("next-button");
 
+phoneNumberInput.addEventListener("input", function () {
+    const phoneNumber = this.value.trim();
+
+    if (/^\d+$/.test(phoneNumber) && count >=1) {
+
+        nextButton.disabled = false;
+        nextButton.classList.remove("bg-gray-400");
+        nextButton.classList.add("bg-lime-500");
+    } else {
+        nextButton.disabled = true;
+        nextButton.classList.remove("bg-lime-500");
+        nextButton.classList.add("bg-gray-400");
+    }
+});
 
 
 
