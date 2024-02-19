@@ -14,6 +14,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <style>
+        li {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
 <body>
@@ -118,7 +124,7 @@
             </div>
         </section>
         <!--Ticket section-->
-        <section id="" class="bg-stone-50 rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-lime-600">
+        <section id="scrollSection" class="bg-stone-50 rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-lime-600">
             <div class="container mx-auto lg:px-20 px-5 py-5">
                 <div class="px-2 lg:px-36 pt-5 mb-7">
                     <h2 class="text-center text-gray-950 text-4xl font-bold font-['Raleway']">Sky Paribahan</h2>
@@ -142,7 +148,8 @@
                             </div>
                             <div class="inline-flex items-center bg-lime-600 bg-opacity-20 rounded-xl p-4 h-14">
                                 <img src="images/seat-green.png" alt="">
-                                <p class="text-lime-600 text-lg font-medium font-['Inter']"><span id="left-seat">40</span> Seats left</p>
+                                <p class="text-lime-600 text-lg font-medium font-['Inter']"><span
+                                        id="left-seat">40</span> Seats left</p>
                             </div>
                         </div>
                         <div class="bg-stone-100 rounded-3xl p-5">
@@ -182,19 +189,22 @@
 
             </div>
             <!--sit section-->
-            <div id="scrollSection" class="container mx-auto lg:px-20 px-5 py-5">
+            <div id="" class="container mx-auto lg:px-20 px-5 py-5">
                 <div class="flex justify-between bg-white rounded-3xl">
                     <div class="w-3/5 p-4">
                         <h3 class="text-gray-950 text-2xl font-semibold font-['Raleway']">Select Your Seat</h3>
                         <hr class="border-dashed border-gray-950 border-opacity-20">
                         <div class="flex justify-between py-2">
-                            <p class="flex items-center gap-2 text-gray-950 text-opacity-50 text-lg font-medium font-['Inter']"><img src="images/seat-gray.png" alt="">Available</p>
-                            <p class="flex items-center gap-2 text-lime-600 text-lg font-medium font-['Inter']"><img src="images/seat-green-filled.png" alt="">Selected
+                            <p
+                                class="flex items-center gap-2 text-gray-950 text-opacity-50 text-lg font-medium font-['Inter']">
+                                <img src="images/seat-gray.png" alt="">Available</p>
+                            <p class="flex items-center gap-2 text-lime-600 text-lg font-medium font-['Inter']"><img
+                                    src="images/seat-green-filled.png" alt="">Selected
                             </p>
                         </div>
                         <hr class="border-dashed border-gray-950 border-opacity-20">
                         <div class="text-right pt-2">
-                            <button class=" bg-gray-950 bg-opacity-10 rounded-xl w-28 h-14 mx-auto"><img
+                            <button class="btn-active bg-gray-950 bg-opacity-10 rounded-xl w-28 h-14 mx-auto"><img
                                     src="images/tabler-icon-steering-wheel.png" alt=""></button>
                         </div>
 
@@ -285,42 +295,66 @@
                         <hr class="border-dashed border-gray-950 border-opacity-20 pb-2">
                         <div class="w-full bg-stone-100 rounded-xl p-4">
                             <div class="flex justify-between pb-2">
-                                <p class="text-gray-950 text-base font-medium font-['Inter']">Seat <span id="seat-count" class="w-7 h-[13px] bg-lime-600 rounded-[5px] p-1 text-white">0</span></p>
+                                <p class="text-gray-950 text-base font-medium font-['Inter']">Seat <span id="seat-count"
+                                        class="w-7 h-[13px] bg-lime-600 rounded-[5px] p-1 text-white">0</span></p>
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Class</p>
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Price</p>
                             </div>
                             <hr class="border-dashed border-gray-950 border-opacity-20 py-2">
-                            <div class="flex justify-between">
-                                <p>C2</p>
-                                <p>Economoy</p>
-                                <p>550</p>
-                            </div>
+                            <ul id="seat-container">
+
+                            </ul>
                             <hr>
                             <div class="flex justify-between py-2">
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Total Price</p>
-                                <p class="text-gray-950 text-base font-medium font-['Inter']">BDT 1100</p>
+                                <p class="text-gray-950 text-base font-medium font-['Inter']">BDT <span
+                                        id="total-cost">0</span></p>
                             </div>
                             <div class="flex">
-                                <input class="w-full h-14 bg-white rounded-xl" type="text" name="" id="">
-                                <a href=""><button class="w-20 h-14 bg-lime-600 rounded-lg text-white">Apply</button></a>
+                                <input class="w-full h-14 bg-white rounded-xl" type="text" name="" id="input-cupon"
+                                    placeholder="Have any copupon?">
+                                <button id="apply-button" class="w-20 h-14 bg-lime-600 rounded-lg text-white "
+                                    disabled>Apply</button>
                             </div>
                             <div class="flex justify-between py-2">
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Grand Total</p>
-                                <p class="text-gray-950 text-base font-medium font-['Inter']">BDT 1100</p>
+                                <p class="text-gray-950 text-base font-medium font-['Inter']">BDT <span
+                                        id="grand-total">0</span></p>
                             </div>
                         </div>
                         <div>
                             <p class="text-gray-950 text-base font-semibold font-['Inter'] py-3">Passenger Name*</p>
-                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4" placeholder="Enter your name" type="text">
+                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4"
+                                placeholder="Enter your name" type="text">
                             <p class="text-gray-950 text-base font-semibold font-['Inter'] py-3">Phone Number*</p>
-                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4" placeholder="Enter your phone number" type="tel">
+                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4"
+                                placeholder="Enter your phone number" type="tel">
                             <p class="text-gray-950 text-base font-semibold font-['Inter'] py-3">Email ID</p>
-                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4" placeholder="Enter your email id" type="email" name="" id="">
-                            <button class="text-center text-white text-xl font-extrabold font-['Raleway'] bg-lime-600 rounded-2xl w-full h-14 mt-3">Next</button>
+                            <input class="w-full h-16 rounded-xl border border-gray-950 border-opacity-10 pl-4"
+                                placeholder="Enter your email id" type="email" name="" id="">
+                            <button id="next-button" class="text-center text-white text-xl font-extrabold font-['Raleway'] bg-lime-600 rounded-2xl w-full h-14 mt-3" disabled onclick="my_modal_5.showModal()">Next</button>
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box text-center">
+                                    <img class="mx-auto" src="images/success.png" alt="">
+                                    <h3 class="font-bold text-lg text-green-500 ">SUCCESS</h3>
+                                    <p class="py-2 text-neutral-600 text-sm font-medium">Thank you for Booking Our Bus Seats. 
+                                        We are working hard to find the best service and deals for you. 
+                                        </p>
+                                        <p class="px-4 text-neutral-600 text-sm font-light">Shortly you will find a confirmation in your email.</p>
+                                    <div class="modal-action flex justify-center mt-4">
+                                        <form method="dialog ">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="w-32 h-14 bg-green-500 rounded-[32px]">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
                         <div class="flex justify-around pt-3">
-                            <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline" href="">Terms and Conditions</a>
-                            <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline" href="">Cancellation Policy</a>
+                            <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline"
+                                href="">Terms and Conditions</a>
+                            <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline"
+                                href="">Cancellation Policy</a>
                         </div>
 
 
