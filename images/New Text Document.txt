@@ -1,0 +1,18 @@
+const btnAll = document.getElementsByClassName("btn");
+
+
+for(const btnal of btnAll){
+    btnal.addEventListener("click", function(){
+        //console.log('boss select korchi')
+        colorChange(btnal);
+    })
+    
+}
+
+function colorChange(buttonClicked){
+    for (const btn of btnAll) {
+        btn.classList.remove('bg-stone-100',);
+    }
+    buttonClicked.style.backgroundColor = '#1DD100';
+    buttonClicked.classList.add('bg-lime-600', 'text-white');
+}

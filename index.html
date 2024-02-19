@@ -23,7 +23,7 @@
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <div tabindex="0" role="button" class=" btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -66,7 +66,7 @@
                     <p class="text-center text-white text-base font-normal font-['Inter'] leading-[20px] my-7">Sky
                         Paribahan offers breathtaking views, soaring above clouds, witnessing sunsets, and embracing a
                         sense of freedom amidst endless horizons, a journey beyond earthly bounds</p>
-                    <button
+                    <button onclick="ticketSection()"
                         class="bg-lime-600 rounded-xl justify-center items-center text-center text-gray-950 text-base p-3 font-bold font-['Raleway'] ">Buy
                         Tickets</button>
                 </div>
@@ -118,7 +118,7 @@
             </div>
         </section>
         <!--Ticket section-->
-        <section class="bg-stone-50 rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-lime-600">
+        <section id="" class="bg-stone-50 rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-lime-600">
             <div class="container mx-auto lg:px-20 px-5 py-5">
                 <div class="px-2 lg:px-36 pt-5 mb-7">
                     <h2 class="text-center text-gray-950 text-4xl font-bold font-['Raleway']">Sky Paribahan</h2>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="inline-flex items-center bg-lime-600 bg-opacity-20 rounded-xl p-4 h-14">
                                 <img src="images/seat-green.png" alt="">
-                                <p class="text-lime-600 text-lg font-medium font-['Inter']">40 Seats left</p>
+                                <p class="text-lime-600 text-lg font-medium font-['Inter']"><span id="left-seat">40</span> Seats left</p>
                             </div>
                         </div>
                         <div class="bg-stone-100 rounded-3xl p-5">
@@ -182,7 +182,7 @@
 
             </div>
             <!--sit section-->
-            <div class="container mx-auto lg:px-20 px-5 py-5">
+            <div id="scrollSection" class="container mx-auto lg:px-20 px-5 py-5">
                 <div class="flex justify-between bg-white rounded-3xl">
                     <div class="w-3/5 p-4">
                         <h3 class="text-gray-950 text-2xl font-semibold font-['Raleway']">Select Your Seat</h3>
@@ -194,89 +194,89 @@
                         </div>
                         <hr class="border-dashed border-gray-950 border-opacity-20">
                         <div class="text-right pt-2">
-                            <button class="btn bg-gray-950 bg-opacity-10 rounded-xl w-28 h-14 mx-auto"><img
+                            <button class=" bg-gray-950 bg-opacity-10 rounded-xl w-28 h-14 mx-auto"><img
                                     src="images/tabler-icon-steering-wheel.png" alt=""></button>
                         </div>
 
                         <div class="flex justify-between items-center w-full mb-5 mt-5">
                             <p>A</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">A1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">A2</button>
+                            <button id="A1" class="btn bg-stone-100 rounded-xl w-28 h-14">A1</button>
+                            <button id="A2" class="btn bg-stone-100 rounded-xl w-28 h-14">A2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">A3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">A4</button>
+                            <button id="A3" class="btn bg-stone-100 rounded-xl w-28 h-14">A3</button>
+                            <button id="A4" class="btn bg-stone-100 rounded-xl w-28 h-14">A4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>B</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">B1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">B2</button>
+                            <button id="B1" class="btn bg-stone-100 rounded-xl w-28 h-14">B1</button>
+                            <button id="B2" class="btn bg-stone-100 rounded-xl w-28 h-14">B2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">B3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">B4</button>
+                            <button id="B3" class="btn bg-stone-100 rounded-xl w-28 h-14">B3</button>
+                            <button id="B4" class="btn bg-stone-100 rounded-xl w-28 h-14">B4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>C</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">C1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">C2</button>
+                            <button id="C1" class="btn bg-stone-100 rounded-xl w-28 h-14">C1</button>
+                            <button id="C2" class="btn bg-stone-100 rounded-xl w-28 h-14">C2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">C3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">C4</button>
+                            <button id="C3" class="btn bg-stone-100 rounded-xl w-28 h-14">C3</button>
+                            <button id="C4" class="btn bg-stone-100 rounded-xl w-28 h-14">C4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>D</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">D1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">D2</button>
+                            <button id="D1" class="btn bg-stone-100 rounded-xl w-28 h-14">D1</button>
+                            <button id="D2" class="btn bg-stone-100 rounded-xl w-28 h-14">D2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">D3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">D4</button>
+                            <button id="D3" class="btn bg-stone-100 rounded-xl w-28 h-14">D3</button>
+                            <button id="D4" class="btn bg-stone-100 rounded-xl w-28 h-14">D4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>E</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">E1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">E2</button>
+                            <button id="E1" class="btn bg-stone-100 rounded-xl w-28 h-14">E1</button>
+                            <button id="E2" class="btn bg-stone-100 rounded-xl w-28 h-14">E2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">E3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">E4</button>
+                            <button id="E3" class="btn bg-stone-100 rounded-xl w-28 h-14">E3</button>
+                            <button id="E4" class="btn bg-stone-100 rounded-xl w-28 h-14">E4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>F</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">F1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">F2</button>
+                            <button id="F1" class="btn bg-stone-100 rounded-xl w-28 h-14">F1</button>
+                            <button id="F2" class="btn bg-stone-100 rounded-xl w-28 h-14">F2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">F3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">F4</button>
+                            <button id="F3" class="btn bg-stone-100 rounded-xl w-28 h-14">F3</button>
+                            <button id="F4" class="btn bg-stone-100 rounded-xl w-28 h-14">F4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>G</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">G1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">G2</button>
+                            <button id="G1" class="btn bg-stone-100 rounded-xl w-28 h-14">G1</button>
+                            <button id="G2" class="btn bg-stone-100 rounded-xl w-28 h-14">G2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">G3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">G4</button>
+                            <button id="G3" class="btn bg-stone-100 rounded-xl w-28 h-14">G3</button>
+                            <button id="G4" class="btn bg-stone-100 rounded-xl w-28 h-14">G4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>H</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">H1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">H2</button>
+                            <button id="H1" class="btn bg-stone-100 rounded-xl w-28 h-14">H1</button>
+                            <button id="H2" class="btn bg-stone-100 rounded-xl w-28 h-14">H2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">H3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">H4</button>
+                            <button id="H3" class="btn bg-stone-100 rounded-xl w-28 h-14">H3</button>
+                            <button id="H4" class="btn bg-stone-100 rounded-xl w-28 h-14">H4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>I</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">I1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">I2</button>
+                            <button id="I1" class="btn bg-stone-100 rounded-xl w-28 h-14">I1</button>
+                            <button id="I2" class="btn bg-stone-100 rounded-xl w-28 h-14">I2</button>
                             <span class="gap-4"></span>
-                             <button class="btn bg-stone-100 rounded-xl w-28 h-14">I3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">I4</button>
+                            <button id="I3" class="btn bg-stone-100 rounded-xl w-28 h-14">I3</button>
+                            <button id="I4" class="btn bg-stone-100 rounded-xl w-28 h-14">I4</button>
                         </div>
                         <div class="flex justify-between items-center w-full mb-5">
                             <p>J</p>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">J1</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">J2</button>
+                            <button id="J1" class="btn bg-stone-100 rounded-xl w-28 h-14">J1</button>
+                            <button id="J2" class="btn bg-stone-100 rounded-xl w-28 h-14">J2</button>
                             <span class="gap-4"></span>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">J3</button>
-                            <button class="btn bg-stone-100 rounded-xl w-28 h-14">J4</button>
+                            <button id="J3" class="btn bg-stone-100 rounded-xl w-28 h-14">J3</button>
+                            <button id="J4" class="btn bg-stone-100 rounded-xl w-28 h-14">J4</button>
                         </div>
 
                     </div>
@@ -285,7 +285,7 @@
                         <hr class="border-dashed border-gray-950 border-opacity-20 pb-2">
                         <div class="w-full bg-stone-100 rounded-xl p-4">
                             <div class="flex justify-between pb-2">
-                                <p class="text-gray-950 text-base font-medium font-['Inter']">Seat <span class="w-7 h-[13px] bg-lime-600 rounded-[5px] p-1 text-white">0</span></p>
+                                <p class="text-gray-950 text-base font-medium font-['Inter']">Seat <span id="seat-count" class="w-7 h-[13px] bg-lime-600 rounded-[5px] p-1 text-white">0</span></p>
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Class</p>
                                 <p class="text-gray-950 text-base font-medium font-['Inter']">Price</p>
                             </div>
@@ -340,7 +340,8 @@
     <footer>
 
     </footer>
-
+    <script src="jsFile/scroll.js"></script>
+    <script src="jsFile/app.js"></script>
 </body>
 
 </html>
