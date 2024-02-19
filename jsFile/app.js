@@ -132,7 +132,7 @@ buttonApply.addEventListener("click", function () {
         cuponInput.style.display = "none";
         buttonApply.style.display = "none";
         
-    } else if (couponCode === "Couple 20") {
+    } else if (couponCode === "Couple 20" && count === 4) {
 
         const grandTotalElement = document.getElementById("grand-total");
         const grandTotal = parseInt(grandTotalElement.innerText);
